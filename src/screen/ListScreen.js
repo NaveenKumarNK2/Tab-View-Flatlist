@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native-gesture-handler';
-import TabsScreen from '../screen/TabsScreen';
+import {Text, StyleSheet} from 'react-native';
 
 
 
@@ -15,6 +15,11 @@ const ListScreen = () => {
         {name : 'ashik'},
         {name : 'karthi'},
         {name : 'Senthilkumar'},
+        {name : 'Kumar'},
+        {name : 'Vinoth'},
+        {name : 'Vicky'},
+        {name : 'AjithKumar'},
+        {name : 'VijayKumar'},
       
     ];
 
@@ -22,18 +27,21 @@ const ListScreen = () => {
         < FlatList
         keyExtractor = {friend => friend.name}
         data = {friends}
-        renderItem = {({item}) => {
-            return (
-                <View>
-                 <TabsScreen name = {item.name} />
-                 </View>
-                    );
-          
-                }}
-                />
-             );
+        renderItem = {({item}) => <Text style={styles.textStyle}> {item.name}  </Text> }/>    
+                     
+                
+        );
              
-          };
+    };
+    const styles = StyleSheet.create({
+    textStyle:{
+        fontSize:35,
+        fontStyle:'italic',
+        marginVertical:25
+        
+    }
+    });
+    export default ListScreen;    
 
-export default ListScreen;
+
                       

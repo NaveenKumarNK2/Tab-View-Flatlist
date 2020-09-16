@@ -2,36 +2,22 @@ import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { TabView, SceneMap } from 'react-native-tab-view';
+import ListScreen from '../screen/ListScreen';
 
-  const friends = [
-  
-      {name : 'Naveenkumar'}, 
-      {name : 'Senthil'},
-      {name : 'santhosh'},
-      {name : 'John'},
-      {name : 'ashik'},
-      {name : 'karthi'},
-      {name : 'Senthilkumar'},
-    
-  ];
+ 
 
     const FirstRoute = () =>  (
-    < FlatList
-    keyExtractor = {friend => friend.name}
-    data = {friends}
-    renderItem = {({item}) => {
-      return
-             <Text name = {item.name} />
-             
-       } } 
-            />
+      <ListScreen/>
+   
          );
 const SecondRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
+  <ListScreen/>
+  
 );
 
 const ThirdRoute = () => (
-  <View style={[styles.scene, { backgroundColor: 'white' }]} />
+  <View style={[styles.scene, { backgroundColor: 'white' }]} >
+  <ListScreen/></View>
 );
  
 const initialLayout = { width: Dimensions.get('window').width };
