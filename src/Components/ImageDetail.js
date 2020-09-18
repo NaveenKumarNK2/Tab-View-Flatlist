@@ -1,58 +1,89 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image} from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 
-    const ImageDetail = props => {
-    
-
-        return (
-            
-            <View style = {styles.flatView}>
-               <View style = {styles.imageView}>
-               <Image
-         style={{
-            resizeMode: "contain",
-            height: 100,
-            width: 200,
-            alignItems:'flex-start',
-            alignSelf:'flex-start'
-          }} 
-               source = { props.imagesource}  /> 
-                </View>
+const ImageDetail = props => {
 
 
-            <View style = {styles.rightImage}>
-            <Image style = {{
-                resizeMode:"contain",
-                height:100,
-                width: 200,
-                alignSelf:'flex-end'
-           }} source = { props.imagesource1} />  </View> 
-    
+    return (
+
+        <View style={styles.flatView}>
+            <View style={styles.imageView}>
+                <Image style={{
+                    flex:1,
+                    resizeMode: "cover",
+                    height: null,
+                    width: null,
+                    alignItems: 'flex-start',
+                    borderBottomLeftRadius:10,
+                    borderBottomRightRadius:10,
+                    borderTopLeftRadius:10,
+                    borderTopRightRadius:10,
+                    shadowColor: '#000000',
+                    shadowOffset: { width: 2, height: 2 },
+                    shadowOpacity: 0.9,
+                    shadowRadius: 3,
+                    
+
+                }}
+                       
+        
+                    source={props.imagesource} />
             </View>
-        );
-    
-    };
-  const styles = StyleSheet.create({
-      flatView:{
-         alignSelf:"stretch",
-         backgroundColor:'yellow',
-         height:100,
-         marginBottom:20
-      },
-      imageView:{
-          height:100,
-          width:100,
-          alignSelf:'flex-start',
-          backgroundColor:'red'
-      },
-      rightImage:{
-          alignSelf:'flex-end',
-          backgroundColor:'blue',
-          height:100,
-          width:100
-      }
 
-  })  ;
+
+            <View style={styles.rightImage}>
+            <Image style={{
+                    flex:2,
+                    resizeMode: "cover",
+                    height: null,
+                    width: null,
+                   
+                    
+
+                }}
+                       
+        
+                    source={props.imagesource1} />
+                 </View>
+
+        </View>
+    );
+
+};
+const styles = StyleSheet.create({
+    flatView: {
+        alignSelf: "stretch",
+        width:100,
+        height: 110,
+        marginBottom: 20,
+        flexDirection: 'row',
+        marginVertical:30
+    },
+    imageView: {
+        
+        height:'120%',
+        width: 150,
+        alignSelf: 'flex-start',
+        
+        marginLeft:'10%',
+        alignSelf: 'flex-start'
+       
+        
+    },
+    rightImage: {
+        alignSelf: 'flex-end',
+        height: 100,
+        width: 130,
+        alignItems:'flex-end',
+        marginLeft:30,
+        marginRight:40,
+        backgroundColor:'red',
+        marginTop:40
+        
+        
+    }
+
+});
 
 
 

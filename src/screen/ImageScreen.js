@@ -8,7 +8,7 @@ const ImageScreen = () => {
 
     const images = [
     
-        {imagesource : require('../../assets/forest.jpg') , imagesource1: require('../../assets/mountain.jpg')}, 
+        {imagesource : require('../../assets/forest.jpg') , imagesource1: require('../../assets/way.jpg')}, 
         {imagesource : require('../../assets/beach.jpg') ,imagesource1 : require('../../assets/rose.jpg')},
         {imagesource : require('../../assets/mountain.jpg'),imagesource1 :require('../../assets/tree.jpg')},
         
