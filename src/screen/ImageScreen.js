@@ -8,21 +8,17 @@ const ImageScreen = () => {
 
     const images = [
     
-        {imagesource : "/../assets/forest.jpg"}, 
-        {imagesource : '../../assets/beach.jpg'},
-        {imagesource : '../../assets/mountain.jpg'},
-        {imagesource : '../../assets/tree.jpg'},
-        {imagesource : '../../assets/rose.jpg'},
-        {imagesource : '../../assets/way.jpg'},
+        {imagesource : require('../../assets/forest.jpg') , imagesource1: require('../../assets/mountain.jpg')}, 
+        {imagesource : require('../../assets/beach.jpg') ,imagesource1 : require('../../assets/rose.jpg')},
+        {imagesource : require('../../assets/mountain.jpg'),imagesource1 :require('../../assets/tree.jpg')},
         
-      
-    ];
+        ];
 
     return(
         < FlatList
         keyExtractor = {image => image.imagesource}
         data = {images}
-    renderItem = {({item}) => <ImageDetail image source ={item.imagesource}/>}   
+    renderItem = {({item}) => <ImageDetail imagesource ={item.imagesource} imagesource1 ={item.imagesource1} />}   
      />                
                 
         );

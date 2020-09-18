@@ -7,7 +7,7 @@ import ImageScreen from '../screen/ImageScreen';
 
  
 
-    const FirstRoute = () =>  (
+const FirstRoute = () =>  (
       <ImageScreen/>
    
          );
@@ -17,7 +17,7 @@ const SecondRoute = () => (
 );
 
 const ThirdRoute = () => (
-  <View style={[styles.scene, { backgroundColor: 'white' }]} >
+  <View style={[styles.scene, { backgroundColor: 'yellow' }]} >
   <ImageScreen/></View>
 );
  
