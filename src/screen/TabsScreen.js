@@ -2,22 +2,23 @@ import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { TabView, SceneMap } from 'react-native-tab-view';
-import ListScreen from '../screen/ListScreen';
+import ImageScreen from '../screen/ImageScreen';
+
 
  
 
     const FirstRoute = () =>  (
-      <ListScreen/>
+      <ImageScreen/>
    
          );
 const SecondRoute = () => (
-  <ListScreen/>
+  <ImageScreen/>
   
 );
 
 const ThirdRoute = () => (
   <View style={[styles.scene, { backgroundColor: 'white' }]} >
-  <ListScreen/></View>
+  <ImageScreen/></View>
 );
  
 const initialLayout = { width: Dimensions.get('window').width };
