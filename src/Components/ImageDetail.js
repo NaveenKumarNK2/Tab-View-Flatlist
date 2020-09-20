@@ -14,10 +14,10 @@ const ImageDetail = props => {
                     height: null,
                     width: null,
                     alignItems: 'flex-start',
-                    borderBottomLeftRadius:10,
-                    borderBottomRightRadius:10,
-                    borderTopLeftRadius:10,
-                    borderTopRightRadius:10,
+                    borderBottomLeftRadius:20,
+                    borderBottomRightRadius:20,
+                    borderTopLeftRadius:20,
+                    borderTopRightRadius:20,
                     shadowColor: '#000000',
                     shadowOffset: { width: 2, height: 2 },
                     shadowOpacity: 0.9,
@@ -37,7 +37,15 @@ const ImageDetail = props => {
                     resizeMode: "cover",
                     height: null,
                     width: null,
-                   
+                    borderBottomLeftRadius:20,
+                    borderBottomRightRadius:20,
+                    borderTopLeftRadius:20,
+                    borderTopRightRadius:20,
+                    shadowColor: '#000000',
+                    shadowOffset: { width: 2, height: 2 },
+                    shadowOpacity: 0.9,
+                    shadowRadius: 3,
+                    
                     
 
                 }}
@@ -71,14 +79,14 @@ const styles = StyleSheet.create({
         
     },
     rightImage: {
-        alignSelf: 'flex-end',
-        height: 100,
-        width: 130,
-        alignItems:'flex-end',
+        
+        height: '120%',
+        width: 150,
         marginLeft:30,
         marginRight:40,
-        backgroundColor:'red',
-        marginTop:40
+    
+        
+        
         
         
     }
